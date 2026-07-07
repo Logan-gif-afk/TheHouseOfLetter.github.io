@@ -1,67 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The House of Letters</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            margin:0;
-            background:#111;
-            color:#f5f1e8;
-            font-family:Georgia, serif;
+<title>The House of Letters</title>
 
-            display:flex;
-            justify-content:center;
-            align-items:center;
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-            height:100vh;
-            text-align:center;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 
-        h1{
-            font-size:60px;
-            margin-bottom:15px;
-        }
+<style>
 
-        p{
-            font-size:22px;
-            color:#d9d1c2;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        button{
-            margin-top:40px;
-            padding:15px 35px;
-            font-size:18px;
+body{
 
-            border:none;
-            cursor:pointer;
+background:#0b0b0b;
 
-            background:#f5f1e8;
-            color:#111;
+font-family:'Cormorant Garamond',serif;
 
-            border-radius:40px;
-        }
+color:white;
 
-        button:hover{
-            transform:scale(1.05);
-        }
-    </style>
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+body::before{
+
+content:"";
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:
+radial-gradient(circle at center,
+rgba(255,255,255,.06),
+transparent 70%);
+
+animation: glow 8s infinite alternate;
+
+}
+
+@keyframes glow{
+
+from{
+opacity:.25;
+}
+
+to{
+opacity:.6;
+}
+
+}
+
+.container{
+
+position:relative;
+
+text-align:center;
+
+z-index:2;
+
+animation:fade 2s;
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+h1{
+
+font-size:72px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+font-size:24px;
+
+color:#d6d6d6;
+
+margin-bottom:45px;
+
+line-height:1.6;
+
+}
+
+button{
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+transition:.35s;
+
+font-family:'Cormorant Garamond',serif;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+
+.small{
+
+margin-top:70px;
+
+font-size:18px;
+
+opacity:.45;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div>
+<div class="container">
 
 <h1>The House of Letters</h1>
 
 <p>
+
 A place built from ink,<br>
+
 memory, and love.
+
 </p>
 
-<button>Open the Door</button>
+<button onclick="window.location.href='letter.html'">
+
+Open the Door
+
+</button>
+
+<div class="small">
+
+For Shahad
+
+</div>
 
 </div>
 
