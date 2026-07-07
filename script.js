@@ -1,10 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* =========================
+   THE HOUSE OF LETTERS
+   Main Script
+========================= */
 
-    document.body.style.opacity = 0;
+
+function enterHouse() {
+
+    const cover = document.querySelector(".cover");
+
+    cover.style.transition = "opacity 1.5s ease";
+
+    cover.style.opacity = "0";
+
 
     setTimeout(() => {
-        document.body.style.transition = "opacity 0.8s";
-        document.body.style.opacity = 1;
-    },100);
 
-});
+        window.location.href = "foyer.html";
+
+    }, 1500);
+
+}
