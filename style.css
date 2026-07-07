@@ -1,77 +1,312 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background:#0b0b0b;
-    color:#f5f1e8;
-    font-family:'Cormorant Garamond',serif;
-    min-height:100vh;
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at center,
+        rgba(255,220,150,0.12),
+        transparent 35%),
+        linear-gradient(
+        135deg,
+        #120d09,
+        #21150d,
+        #090604
+        );
+
+    color: #e8d3a7;
+    font-family: "Cormorant Garamond", serif;
+
+    overflow: hidden;
 }
 
-.container{
-    width:90%;
-    max-width:900px;
-    margin:auto;
-    padding:80px 20px;
+
+/* =========================
+   COVER PAGE
+========================= */
+
+.cover {
+
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
 }
 
-h1{
-    font-size:64px;
-    text-align:center;
-    margin-bottom:20px;
-    font-weight:600;
+
+/* candle light effect */
+
+.candle-glow {
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,200,120,0.25),
+        transparent 65%
+    );
+
+    filter: blur(40px);
+
+    animation: breathe 5s infinite alternate;
+
 }
 
-h2{
-    font-size:38px;
-    margin-top:50px;
-    margin-bottom:15px;
+
+@keyframes breathe {
+
+    from {
+        opacity: .5;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
 }
 
-p{
-    font-size:24px;
-    line-height:1.9;
-    color:#d8d8d8;
+
+
+/* =========================
+   BOOK COVER
+========================= */
+
+
+.book-cover {
+
+    position: relative;
+
+    width: min(90%, 650px);
+
+    padding: 70px 50px;
+
+    text-align: center;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(70,45,25,0.85),
+        rgba(20,12,8,0.95)
+    );
+
+
+    border:
+
+    1px solid rgba(220,180,100,0.25);
+
+
+    box-shadow:
+
+    0 0 80px rgba(0,0,0,.8),
+    inset 0 0 40px rgba(255,200,100,.05);
+
+
+    animation: appear 2s ease;
+
 }
 
-.subtitle{
-    text-align:center;
-    font-size:24px;
-    margin-bottom:60px;
-    opacity:.8;
+
+
+@keyframes appear {
+
+    from {
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
-.button{
-    display:inline-block;
-    margin-top:50px;
-    padding:16px 40px;
-    border:1px solid #ffffff;
-    border-radius:999px;
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-    font-size:22px;
+
+
+
+/* =========================
+   TEXT
+========================= */
+
+
+.small-title {
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    font-size: 14px;
+
+    opacity: .7;
+
+    margin-bottom: 35px;
+
 }
 
-.button:hover{
-    background:white;
-    color:#111;
+
+
+h1 {
+
+    font-family:
+    "Playfair Display",
+    serif;
+
+
+    font-size:
+
+    clamp(55px,8vw,90px);
+
+
+    line-height: .9;
+
+    font-weight: 500;
+
+
+    color:#f0d8a8;
+
+    text-shadow:
+
+    0 5px 20px rgba(0,0,0,.7);
+
 }
 
-.menu{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    align-items:center;
-    margin-top:50px;
+
+
+.divider {
+
+    width:120px;
+
+    height:1px;
+
+    background:#c8a86b;
+
+    margin:40px auto;
+
 }
 
-.quote{
-    margin-top:80px;
-    text-align:center;
+
+
+.quote {
+
+    font-size:25px;
+
     font-style:italic;
-    opacity:.5;
+
+    line-height:1.5;
+
+    color:#d8c095;
+
+    margin-bottom:45px;
+
+}
+
+
+
+/* =========================
+   BUTTON
+========================= */
+
+
+button {
+
+
+    background:transparent;
+
+
+    border:
+
+    1px solid #c8a86b;
+
+
+    color:#e8d3a7;
+
+
+    padding:
+
+    15px 45px;
+
+
+    font-family:
+
+    "Cormorant Garamond",
+    serif;
+
+
+    font-size:20px;
+
+
+    cursor:pointer;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+button:hover {
+
+
+    background:#c8a86b;
+
+
+    color:#160d07;
+
+
+    box-shadow:
+
+    0 0 30px rgba(200,168,107,.4);
+
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:600px){
+
+
+.book-cover {
+
+    padding:50px 25px;
+
+}
+
+
+.quote {
+
+    font-size:20px;
+
+}
+
+
 }
