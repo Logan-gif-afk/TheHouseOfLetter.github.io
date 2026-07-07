@@ -310,3 +310,105 @@ button:hover {
 
 
 }
+/* =========================
+   FOYER
+========================= */
+
+
+.foyer {
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+
+.foyer-light {
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(255,210,130,.18),
+        transparent 65%
+    );
+
+    filter:blur(50px);
+
+}
+
+
+
+.entrance {
+
+    text-align:center;
+
+    width:min(90%,650px);
+
+    animation:appear 2s ease;
+
+}
+
+
+
+.entrance h1 {
+
+    font-size:80px;
+
+}
+
+
+
+nav {
+
+    margin-top:50px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+nav a {
+
+    color:#e8d3a7;
+
+    text-decoration:none;
+
+    border-bottom:1px solid rgba(200,168,107,.4);
+
+    padding:15px;
+
+    font-size:25px;
+
+    transition:.4s;
+
+}
+
+
+
+nav a:hover {
+
+    color:#fff;
+
+    padding-left:25px;
+
+}
