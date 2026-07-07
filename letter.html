@@ -3,13 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Dear Shahad</title>
+<title>The House of Letters</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,31 +15,47 @@ body{
 background:#0b0b0b;
 color:white;
 font-family:'Cormorant Garamond',serif;
-max-width:850px;
-margin:auto;
-padding:80px 35px;
-line-height:1.9;
-font-size:24px;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.container{
+text-align:center;
+max-width:700px;
+padding:40px;
 }
 
 h1{
-font-size:58px;
-margin-bottom:50px;
+font-size:60px;
+margin-bottom:20px;
 }
 
 p{
-margin-bottom:35px;
-color:#dddddd;
+font-size:24px;
+color:#d5d5d5;
+line-height:1.8;
+margin-bottom:50px;
 }
 
 a{
-color:white;
-text-decoration:none;
+display:block;
+width:280px;
+margin:18px auto;
+padding:16px;
 border:1px solid white;
-padding:14px 30px;
-border-radius:40px;
-display:inline-block;
-margin-top:50px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+transition:.3s;
+font-size:22px;
+}
+
+a:hover{
+background:white;
+color:black;
 }
 
 </style>
@@ -50,34 +64,26 @@ margin-top:50px;
 
 <body>
 
-<h1>Dear Shahad,</h1>
+<div class="container">
+
+<h1>Welcome.</h1>
 
 <p>
-There are some feelings too large for messages.
-Too quiet for conversations.
-Too important to leave unsaid.
-</p>
 
-<p>
-So I built this place.
+Every room in this house was built because one day...
 
-Every room you enter,
-every poem you read,
-every letter you discover,
-
-was written because one day,
 I met you.
+
+Choose a room.
+
 </p>
 
-<p>
-If you ever wonder whether you are loved,
+<a href="dear.html">💌 Dear Shahad</a>
 
-come back to this house.
+<a href="poetry.html">📖 The Poetry Room</a>
 
-I'll always be writing.
-</p>
-
-<a href="index.html">Return Home</a>
+</div>
 
 </body>
+
 </html>
